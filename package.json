@@ -1,0 +1,22 @@
+{
+  "name": "pusher-poc",
+  "version": "1.0.0",
+  "description": "pusher poc",
+  "main": "index.js",
+  "author": "ashwani",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "server": "node --experimental-specifier-resolution=node server/index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.8.1",
+    "apollo-server": "^3.12.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "graphql": "^16.7.1",
+    "pusher": "^5.1.3"
+  }
+}
