@@ -1,8 +1,3 @@
-const todoList = [
-    {
-        id:1,
-        item:"task 1"
-    }
-]
+const todoList = []
 
 export default todoList;

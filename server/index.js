@@ -46,7 +46,11 @@ app.post("/pusher/user-auth", (req, res) => {
   const socketId = req.body.socket_id;
   const channel = req.body.channel_name;
 
-  // Replace this with code to retrieve the actual user id and info
+  // const token = req.headers.authorization
+  
+  // we can add custom token validation here to validate and fetch the user details 
+  // req.headers.authorization to validate the user
+  // user detail would look like below one
   const user = {
     user_id: "123",
     user_info: {

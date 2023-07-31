@@ -8,14 +8,16 @@ export const resolvers = {
     }
   },  
   Mutation: {
-    addTodo(root, args, context, info) {
+    addTodo(_root, args, _context, _info) {
       const todoId = todoList.length + 1;
       const todoItem = {
         item:args.item,
         id: todoId,
         publishedAt: new Date().toISOString()
       };
-      pusher.trigger("private-pusher-poc", "my-event", todoItem);
+      const channelName = "private-pusher-poc"; 
+      const eventName = "my-event";
+      pusher.trigger(channelName, eventName, todoItem);
       todoList.push(todoItem);
       return todoItem;
     }
